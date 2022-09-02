@@ -51,14 +51,16 @@ else {
   <head>
     <meta charset="utf-8">
     <title>Alterar contato</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <script type ="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <script type ="text/javascript" src="js/bootstrap.min.js"></script>
   </head>
   <body style="padding-top: 10%;">
-    <div class="container">
-      <div style="justify-content: center; display: flex; padding-top: 30px;">
+    <div class="col-6-custom">
+      <div>
         <h1>Alterar contato</h1>
       </div>
-      <div class="container"style="justify-content: center; display: flex; padding-top: 30px;">
+      <div>
         <form action="contatos_model.php" method="post">
           <div class="col-12">
             <label for="id_contatos">ID</label>
@@ -82,7 +84,7 @@ else {
 
           <br />
 
-          <button type="submit" name="enviarDados" class="btn btn-primary" value="ALT" style="margin-right: 100px;">Alterar</button>
+          <button type="submit" name="enviarDados" class="btn btn-primary" value="ALT" style="margin-right: 10px;">Alterar</button>
           <a href="index_logado.php" class="btn btn-danger">Cancelar</a>
 
         </form>

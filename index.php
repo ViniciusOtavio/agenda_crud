@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Página Inicial</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <script type ="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <script type ="text/javascript" src="js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div class="container" style="align-content: center;">
+    <div >
       <?php if (!empty($_GET['msgErro'])) { ?>
         <div class="alert alert-warning" role="alert">
           <?php echo $_GET['msgErro']; ?>
@@ -19,22 +21,23 @@
         </div>
       <?php } ?>
     </div>
-    <div class="container" style="justify-content: center; display: flex;padding-top: 10%;">
-    <h1>Seja bem-vindo(a) a agenda compartilhada.</h1>
-    </div>
-    <div class="container" style="justify-content: center; display: flex; padding-top: 30px;">
-      <form action="login_model.php" method="post">
-        <div class="col-12">
-          <label for="email">E-mail</label>
-          <input type="email" name="email" id="email" class="form-control">
-        </div>
-        <div class="col-12">
-          <label for="senha">Senha</label>
-          <input type="password" name="senha" id="senha" class="form-control">
-        </div><br/>
-        <button type="submit" name="enviarDados" class="btn btn-primary" style="margin-right: 100px; width: 110px;">Entrar</button>
-        <a href="cadastrar_usuario.html" class="btn btn-success">Cadastrar-se</a>
-      </form>
+    <div>
+      <div class="col-6-custom" style="margin-top: 5%;">
+      <img src="imagens/home.png" width="200" height="200">
+      <h1 style="margin-top: 10%;">Seja bem-vindo(a) a agenda compartilhada.</h1>
+        <form action="login_model.php" method="post">
+          <div class="col-12">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" class="form-control">
+          </div>
+          <div class="col-12">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" class="form-control">
+          </div><br/>
+          <button type="submit" name="enviarDados" class="btn btn-primary" style="margin-right: 10px; width: 110px;">Entrar</button>
+          <a href="cadastrar_usuario.html" class="btn btn-success">Cadastrar-se</a>
+        </form>
+      </div>
     </div>
   </body>
 </html>

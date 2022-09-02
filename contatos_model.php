@@ -38,11 +38,11 @@ if (!empty($_POST)) {
         // Tentar Executar a SQL (INSERT)
         // Realizar a inserção das informações no BD (com o PHP)
         if ($stmt->execute($dados)) {
-          header("Location: index_logado.php?msgSucesso=Anúncio cadastrado com sucesso!");
+          header("Location: index_logado.php?msgSucesso=Contato cadastrado com sucesso!");
         }
     } catch (PDOException $e) {
         die($e->getMessage());
-        header("Location: index_logado.php?msgErro=Falha ao cadastrar anúncio..");
+        header("Location: index_logado.php?msgErro=Falha ao cadastrar contato..");
     }
   }
   elseif ($_POST['enviarDados'] == 'ALT') { // ALTERAR!!!
@@ -73,10 +73,10 @@ if (!empty($_POST)) {
         header("Location: index_logado.php?msgSucesso=Alteração realizada com sucesso!!");
       }
       else {
-        header("Location: index_logado.php?msgErro=Falha ao ALTERAR anúncio..");
+        header("Location: index_logado.php?msgErro=Falha ao ALTERAR contato..");
       }
     } catch (PDOException $e) {
-      header("Location: index_logado.php?msgErro=Falha ao ALTERAR anúncio..");
+      header("Location: index_logado.php?msgErro=Falha ao ALTERAR contato..");
     }
 
   }
@@ -91,13 +91,13 @@ if (!empty($_POST)) {
       $dados = array(':id_contatos' => $_POST['id_contatos'], ':email' => $_SESSION['email']);
 
       if ($stmt->execute($dados)) {
-        header("Location: index_logado.php?msgSucesso=Anúncio excluído com sucesso!!");
+        header("Location: index_logado.php?msgSucesso=Contato excluído com sucesso!!");
       }
       else {
-        header("Location: index_logado.php?msgSucesso=Falha ao EXCLUIR anúncio..");
+        header("Location: index_logado.php?msgSucesso=Falha ao EXCLUIR contato..");
       }
     } catch (PDOException $e) {
-      header("Location: index_logado.php?msgSucesso=Falha ao EXCLUIR anúncio..");
+      header("Location: index_logado.php?msgSucesso=Falha ao EXCLUIR contato..");
     }
   }
   else {

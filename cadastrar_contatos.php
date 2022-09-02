@@ -13,14 +13,13 @@ if (empty($_SESSION)) {
   <head>
     <meta charset="utf-8">
     <title>Cadastrar Novo Contato</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <script type ="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <script type ="text/javascript" src="js/bootstrap.min.js"></script>
   </head>
-  <body style="padding-top: 10%;">
-    <div class="container">
-      <div style="justify-content: center; display: flex; padding-top: 30px;">
+  <body>
+    <div class="col-6-custom" style="margin-top: 10%;">
         <h1>Cadastrar Novo Contato na Agenda</h1>
-      </div>
-      <div class="container"style="justify-content: center; display: flex; padding-top: 30px;">
         <form action="contatos_model.php" method="post">
 
         <div class="col-12">
@@ -40,12 +39,10 @@ if (empty($_SESSION)) {
 
         <br />
 
-        <button type="submit" name="enviarDados" class="btn btn-primary" value="CAD" style="margin-right: 100px;">Cadastrar</button>
+        <button type="submit" name="enviarDados" class="btn btn-primary" value="CAD" style="margin-right: 10px;">Cadastrar</button>
         <a href="index_logado.php" class="btn btn-danger">Cancelar</a>
 
         </form>
-      </div>
-      
     </div>
   </body>
 </html>
