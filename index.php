@@ -33,7 +33,7 @@
           <input type="password" name="senha" id="senha" class="form-control">
         </div><br/>
         <button type="submit" name="enviarDados" class="btn btn-primary" style="margin-right: 100px; width: 110px;">Entrar</button>
-        <a href="cadastrar_usuario.php" class="btn btn-success">Cadastrar-se</a>
+        <a href="cadastrar_usuario.html" class="btn btn-success">Cadastrar-se</a>
       </form>
     </div>
   </body>
